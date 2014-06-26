@@ -78,9 +78,9 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'KeenIO' do |k|
-    tf.source_files = 'Providers/KeenIO/AnalyticsKitKeenIOProvider.{h,m}'
-    tf.dependency 'KeenClient'
-    tf.dependency 'AnalyticsKit/Core'
+    k.source_files = 'Providers/KeenIO/AnalyticsKitKeenIOProvider.{h,m}'
+    k.dependency 'KeenClient'
+    k.dependency 'AnalyticsKit/Core'
   end
 
 end
