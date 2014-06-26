@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7DBCFC40195C9E3B004ABC3E /* AnalyticsKitKeenIOProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBCFC3F195C9E3B004ABC3E /* AnalyticsKitKeenIOProvider.m */; };
+		7DBCFC46195C9F51004ABC3E /* libKeenClient-Aggregate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DBCFC45195C9F51004ABC3E /* libKeenClient-Aggregate.a */; };
 		9C0EF2F118DCFE9B00D19A2C /* AnalyticsKitTimedEventHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EF2F018DCFE9B00D19A2C /* AnalyticsKitTimedEventHelper.m */; };
 		9C0EF30918E0C33700D19A2C /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C0EF30118E0C33700D19A2C /* libOCMock.a */; };
 		9C0EF31118E0D12000D19A2C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C0EF31018E0D12000D19A2C /* Crashlytics.framework */; };
@@ -92,6 +94,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7DBCFC3E195C9E3B004ABC3E /* AnalyticsKitKeenIOProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnalyticsKitKeenIOProvider.h; path = KeenIO/AnalyticsKitKeenIOProvider.h; sourceTree = "<group>"; };
+		7DBCFC3F195C9E3B004ABC3E /* AnalyticsKitKeenIOProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnalyticsKitKeenIOProvider.m; path = KeenIO/AnalyticsKitKeenIOProvider.m; sourceTree = "<group>"; };
+		7DBCFC42195C9F51004ABC3E /* KeenClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeenClient.h; sourceTree = "<group>"; };
+		7DBCFC43195C9F51004ABC3E /* KeenProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeenProperties.h; sourceTree = "<group>"; };
+		7DBCFC44195C9F51004ABC3E /* KIOEventStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIOEventStore.h; sourceTree = "<group>"; };
+		7DBCFC45195C9F51004ABC3E /* libKeenClient-Aggregate.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libKeenClient-Aggregate.a"; sourceTree = "<group>"; };
 		9C0EF2EF18DCFE9B00D19A2C /* AnalyticsKitTimedEventHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyticsKitTimedEventHelper.h; sourceTree = "<group>"; };
 		9C0EF2F018DCFE9B00D19A2C /* AnalyticsKitTimedEventHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalyticsKitTimedEventHelper.m; sourceTree = "<group>"; };
 		9C0EF30118E0C33700D19A2C /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = OCMock/libOCMock.a; sourceTree = "<group>"; };
@@ -242,6 +250,7 @@
 				9C0EF37418E0EFED00D19A2C /* MobileCoreServices.framework in Frameworks */,
 				9C0EF37218E0EFC700D19A2C /* CFNetwork.framework in Frameworks */,
 				9C0EF37018E0EE9500D19A2C /* libz.dylib in Frameworks */,
+				7DBCFC46195C9F51004ABC3E /* libKeenClient-Aggregate.a in Frameworks */,
 				9C0EF36E18E0EE5F00D19A2C /* CoreData.framework in Frameworks */,
 				9C0EF36A18E0EDBC00D19A2C /* SystemConfiguration.framework in Frameworks */,
 				9C0EF3A518E0F89D00D19A2C /* libFlurry_4.3.2.a in Frameworks */,
@@ -271,6 +280,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DBCFC3D195C9D82004ABC3E /* KeenIO */ = {
+			isa = PBXGroup;
+			children = (
+				7DBCFC3E195C9E3B004ABC3E /* AnalyticsKitKeenIOProvider.h */,
+				7DBCFC3F195C9E3B004ABC3E /* AnalyticsKitKeenIOProvider.m */,
+			);
+			name = KeenIO;
+			sourceTree = "<group>";
+		};
+		7DBCFC41195C9F51004ABC3E /* KeenIO */ = {
+			isa = PBXGroup;
+			children = (
+				7DBCFC42195C9F51004ABC3E /* KeenClient.h */,
+				7DBCFC43195C9F51004ABC3E /* KeenProperties.h */,
+				7DBCFC44195C9F51004ABC3E /* KIOEventStore.h */,
+				7DBCFC45195C9F51004ABC3E /* libKeenClient-Aggregate.a */,
+			);
+			name = KeenIO;
+			path = ProviderLibraries/KeenIO;
+			sourceTree = "<group>";
+		};
 		9C0EF30018E0C2E800D19A2C /* OCMock */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +337,7 @@
 				9C0EF32218E0DB7F00D19A2C /* ApSalar */,
 				9C0EF32418E0DB7F00D19A2C /* Flurry */,
 				9C0EF30F18E0D0FE00D19A2C /* Crashlytics */,
+				7DBCFC41195C9F51004ABC3E /* KeenIO */,
 			);
 			name = ProviderLibraries;
 			sourceTree = "<group>";
@@ -609,6 +640,7 @@
 		9C3799EE18183A6B00488101 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				7DBCFC3D195C9D82004ABC3E /* KeenIO */,
 				9C3799EF18183A6B00488101 /* AdjustIO */,
 				9C3799F218183A6B00488101 /* Apsalar */,
 				9C379A1818183BAD00488101 /* Crashlytics */,
@@ -842,6 +874,7 @@
 				9C5DE4B7194A609500C4C938 /* LocalyticsUtil.m in Sources */,
 				9C0EF39F18E0F57E00D19A2C /* MPCJSONSerializer.m in Sources */,
 				9C3799BE181838FD00488101 /* AnalyticsKitAppDelegate.m in Sources */,
+				7DBCFC40195C9E3B004ABC3E /* AnalyticsKitKeenIOProvider.m in Sources */,
 				9C0EF31918E0D1C500D19A2C /* AnalyticsKitParseProvider.m in Sources */,
 				9C0EF35518E0ED4C00D19A2C /* Adjust.m in Sources */,
 				9C379A0D18183A6B00488101 /* AnalyticsKitUnitTestProvider.m in Sources */,
@@ -994,6 +1027,7 @@
 					"\"$(PROJECT_DIR)/AnalyticsKit/ProviderLibraries/Flurry\"",
 					"\"$(PROJECT_DIR)/AnalyticsKit/ProviderLibraries/GoogleAnalytics\"",
 					"\"$(PROJECT_DIR)/AnalyticsKit/ProviderLibraries/TestFlight\"",
+					"$(PROJECT_DIR)/AnalyticsKit/ProviderLibraries/KeenIO",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1027,6 +1061,7 @@
 					"\"$(PROJECT_DIR)/AnalyticsKit/ProviderLibraries/Flurry\"",
 					"\"$(PROJECT_DIR)/AnalyticsKit/ProviderLibraries/GoogleAnalytics\"",
 					"\"$(PROJECT_DIR)/AnalyticsKit/ProviderLibraries/TestFlight\"",
+					"$(PROJECT_DIR)/AnalyticsKit/ProviderLibraries/KeenIO",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
